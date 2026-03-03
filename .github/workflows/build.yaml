@@ -1,0 +1,52 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          # Initializes the gradle-build-action which caches ~/.gradle/caches and ~/.gradle/wrapper
+          # cache-read-only: false # Optional: set to false to allow writing to the cache
+          gradle-version: wrapper # Use the version from gradle-wrapper.properties
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew libxposed/api/gradlew libxposed/service/gradlew
+
+      - name: Build libxposed to mavenLocal
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: ./gradlew buildLibxposed
+
+      - name: Build with Gradle
+        run: ./gradlew assembleRelease
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ezxclean-release
+          path: app/build/outputs/apk/release/*.apk

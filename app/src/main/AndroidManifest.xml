@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:description="@android:string/unknownName"
+        android:label="EzXClean"
+        android:theme="@android:style/Theme.DeviceDefault"
+        tools:ignore="MissingApplicationIcon">
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="EzXClean - Modern Cache Purge for LibXposed 100" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="100" />
+    </application>
+</manifest>
