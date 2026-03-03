@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:description="Claw-G Vision overlay automation for LibXposed 100"
-        android:label="Claw-G Vision"
+        android:description="@string/module_description"
+        android:label="@string/module_name"
         android:theme="@android:style/Theme.DeviceDefault"
         tools:ignore="MissingApplicationIcon">
         <meta-data
