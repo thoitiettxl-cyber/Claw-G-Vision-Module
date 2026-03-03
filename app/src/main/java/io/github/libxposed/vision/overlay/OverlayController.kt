@@ -1,11 +1,11 @@
-package io.github.libxposed.ezxclean.vision.overlay
+package io.github.libxposed.vision.overlay
 
 import android.app.Application
 import android.os.Handler
 import android.os.Looper
-import io.github.libxposed.ezxclean.logE
-import io.github.libxposed.ezxclean.logI
-import io.github.libxposed.ezxclean.vision.model.OverlayConfig
+import io.github.libxposed.vision.logE
+import io.github.libxposed.vision.logI
+import io.github.libxposed.vision.model.OverlayConfig
 
 object OverlayController {
     private lateinit var application: Application

@@ -1,14 +1,14 @@
-package io.github.libxposed.ezxclean.handlers
+package io.github.libxposed.vision.handlers
 
 import android.app.Application
-import io.github.libxposed.ezxclean.arch.IHook
-import io.github.libxposed.ezxclean.arch.hookAfter
-import io.github.libxposed.ezxclean.bridge.LoadPackageParam
-import io.github.libxposed.ezxclean.logE
-import io.github.libxposed.ezxclean.logI
-import io.github.libxposed.ezxclean.vision.action.ActionDispatcher
-import io.github.libxposed.ezxclean.vision.model.VisionConfig
-import io.github.libxposed.ezxclean.vision.overlay.OverlayController
+import io.github.libxposed.vision.arch.IHook
+import io.github.libxposed.vision.arch.hookAfter
+import io.github.libxposed.vision.bridge.LoadPackageParam
+import io.github.libxposed.vision.logE
+import io.github.libxposed.vision.logI
+import io.github.libxposed.vision.action.ActionDispatcher
+import io.github.libxposed.vision.model.VisionConfig
+import io.github.libxposed.vision.overlay.OverlayController
 
 class VisionBootstrapHandler : IHook() {
 

@@ -1,11 +1,11 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package io.github.libxposed.ezxclean.arch
+package io.github.libxposed.vision.arch
 
-import io.github.libxposed.ezxclean.bridge.HookParam
-import io.github.libxposed.ezxclean.bridge.MethodHookCallback
-import io.github.libxposed.ezxclean.bridge.Unhook
-import io.github.libxposed.ezxclean.bridge.Xposed
+import io.github.libxposed.vision.bridge.HookParam
+import io.github.libxposed.vision.bridge.MethodHookCallback
+import io.github.libxposed.vision.bridge.Unhook
+import io.github.libxposed.vision.bridge.Xposed
 import java.lang.reflect.Constructor
 import java.lang.reflect.Method
 

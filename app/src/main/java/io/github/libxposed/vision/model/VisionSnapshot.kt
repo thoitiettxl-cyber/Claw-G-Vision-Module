@@ -1,4 +1,4 @@
-package io.github.libxposed.ezxclean.vision.model
+package io.github.libxposed.vision.model
 
 data class VisionSnapshot(
     val timestampMs: Long,

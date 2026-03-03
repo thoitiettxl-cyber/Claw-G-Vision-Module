@@ -1,4 +1,4 @@
-package io.github.libxposed.ezxclean.bridge
+package io.github.libxposed.vision.bridge
 
 import io.github.libxposed.api.XposedInterface
 import io.github.libxposed.api.XposedInterface.BeforeHookCallback

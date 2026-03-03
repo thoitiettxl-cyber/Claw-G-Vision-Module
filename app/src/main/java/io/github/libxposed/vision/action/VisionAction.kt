@@ -1,4 +1,4 @@
-package io.github.libxposed.ezxclean.vision.action
+package io.github.libxposed.vision.action
 
 import android.app.Application
 

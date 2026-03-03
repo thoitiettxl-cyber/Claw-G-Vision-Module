@@ -1,4 +1,4 @@
-package io.github.libxposed.ezxclean.bridge
+package io.github.libxposed.vision.bridge
 
 abstract class MethodHookCallback {
     open fun beforeHook(param: HookParam) {}

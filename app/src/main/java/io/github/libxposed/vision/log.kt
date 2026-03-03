@@ -1,6 +1,6 @@
-package io.github.libxposed.ezxclean
+package io.github.libxposed.vision
 
-import io.github.libxposed.ezxclean.bridge.Xposed
+import io.github.libxposed.vision.bridge.Xposed
 
 /**
  * Logging utilities với format chuẩn

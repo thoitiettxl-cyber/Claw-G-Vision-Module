@@ -1,9 +1,9 @@
-package io.github.libxposed.ezxclean.vision.action
+package io.github.libxposed.vision.action
 
 import android.app.Application
-import io.github.libxposed.ezxclean.logE
-import io.github.libxposed.ezxclean.logI
-import io.github.libxposed.ezxclean.vision.model.ActionConfig
+import io.github.libxposed.vision.logE
+import io.github.libxposed.vision.logI
+import io.github.libxposed.vision.model.ActionConfig
 
 object ActionDispatcher {
     private lateinit var app: Application

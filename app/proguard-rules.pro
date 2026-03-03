@@ -1,6 +1,6 @@
 # Xposed Module Entry
 -adaptresourcefilecontents META-INF/xposed/java_init.list
--keep class io.github.libxposed.ezxclean.ModuleMain {
+-keep class io.github.libxposed.vision.ModuleMain {
     public <init>(...);
     public void onPackageLoaded(...);
     public void onSystemServerLoaded(...);
@@ -16,13 +16,13 @@
 
 # Claw-G Vision Layers
 # Bridge Layer - Must be kept for reflection wrappings
--keep class io.github.libxposed.ezxclean.bridge.** { *; }
+-keep class io.github.libxposed.vision.bridge.** { *; }
 
 # Arch Layer - IHook and utilities
--keep class io.github.libxposed.ezxclean.arch.** { *; }
+-keep class io.github.libxposed.vision.arch.** { *; }
 
 # Handlers
--keep class io.github.libxposed.ezxclean.handlers.** { *; }
+-keep class io.github.libxposed.vision.handlers.** { *; }
 
 # Kotlin Standard Library
 -assumenosideeffects class kotlin.jvm.internal.Intrinsics {

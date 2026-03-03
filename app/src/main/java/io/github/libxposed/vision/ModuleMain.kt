@@ -1,14 +1,14 @@
-package io.github.libxposed.ezxclean
+package io.github.libxposed.vision
 
 import io.github.libxposed.api.XposedInterface
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.ModuleLoadedParam
 import io.github.libxposed.api.XposedModuleInterface.PackageLoadedParam
-import io.github.libxposed.ezxclean.bridge.LoadPackageParam
-import io.github.libxposed.ezxclean.bridge.Xposed
-import io.github.libxposed.ezxclean.handlers.VisionBootstrapHandler
-import io.github.libxposed.ezxclean.logE
-import io.github.libxposed.ezxclean.logI
+import io.github.libxposed.vision.bridge.LoadPackageParam
+import io.github.libxposed.vision.bridge.Xposed
+import io.github.libxposed.vision.handlers.VisionBootstrapHandler
+import io.github.libxposed.vision.logE
+import io.github.libxposed.vision.logI
 
 /**
  * Claw-G Vision Module Entry

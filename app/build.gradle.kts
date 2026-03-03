@@ -16,7 +16,7 @@ lsparanoid {
 }
 
 android {
-    namespace = "io.github.libxposed.ezxclean"
+    namespace = "io.github.libxposed.vision"
     compileSdk = 36
     buildToolsVersion = "36.0.0"
 
