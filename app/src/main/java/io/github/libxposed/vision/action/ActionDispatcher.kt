@@ -4,6 +4,7 @@ import android.app.Application
 import io.github.libxposed.vision.logE
 import io.github.libxposed.vision.logI
 import io.github.libxposed.vision.model.ActionConfig
+import io.github.libxposed.vision.model.DispatchGuard
 
 object ActionDispatcher {
     private lateinit var app: Application
