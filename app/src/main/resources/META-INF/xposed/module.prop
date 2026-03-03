@@ -1,3 +1,7 @@
+name=Claw-G Vision
+description=Vision overlay automation for LibXposed 100
+version=1.0
+author=Claw-G
 minApiVersion=100
 targetApiVersion=100
 staticScope=true

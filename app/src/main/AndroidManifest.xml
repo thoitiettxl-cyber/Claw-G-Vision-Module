@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:description="@android:string/unknownName"
-        android:label="EzXClean"
+        android:description="Claw-G Vision overlay automation for LibXposed 100"
+        android:label="Claw-G Vision"
         android:theme="@android:style/Theme.DeviceDefault"
         tools:ignore="MissingApplicationIcon">
         <meta-data
@@ -12,7 +12,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="EzXClean - Modern Cache Purge for LibXposed 100" />
+            android:value="Claw-G Vision - Vision overlay automation" />
         <meta-data
             android:name="xposedminversion"
             android:value="100" />

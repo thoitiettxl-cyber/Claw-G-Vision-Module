@@ -4,9 +4,9 @@ import io.github.libxposed.ezxclean.bridge.Xposed
 
 /**
  * Logging utilities với format chuẩn
- * Tag: EzXClean - filter với: su -c "logcat -s EzXClean"
+ * Tag: Claw-G Vision - filter với: su -c "logcat -s Claw-G Vision"
  */
-private const val TAG = "EzXClean"
+private const val TAG = "Claw-G Vision"
 
 fun logI(msg: String) {
     Xposed.log("$TAG: [INFO] $msg")

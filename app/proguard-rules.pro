@@ -14,7 +14,7 @@
     public static * before(...);
 }
 
-# EzXClean Layers
+# Claw-G Vision Layers
 # Bridge Layer - Must be kept for reflection wrappings
 -keep class io.github.libxposed.ezxclean.bridge.** { *; }
 

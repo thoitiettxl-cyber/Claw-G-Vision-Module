@@ -23,7 +23,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EzXClean"
+rootProject.name = "Claw-G Vision"
 
 include(":app")
 include(":libxposed-compat")

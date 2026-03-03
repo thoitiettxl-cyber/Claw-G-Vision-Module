@@ -6,11 +6,13 @@ import io.github.libxposed.api.XposedModuleInterface.ModuleLoadedParam
 import io.github.libxposed.api.XposedModuleInterface.PackageLoadedParam
 import io.github.libxposed.ezxclean.bridge.LoadPackageParam
 import io.github.libxposed.ezxclean.bridge.Xposed
-import io.github.libxposed.ezxclean.handlers.CleanHandler
+import io.github.libxposed.ezxclean.handlers.VisionBootstrapHandler
+import io.github.libxposed.ezxclean.logE
+import io.github.libxposed.ezxclean.logI
 
 /**
- * EzXClean Module Entry
- * Tuân thủ Modern Xposed API 100 standards
+ * Claw-G Vision Module Entry
+ * Tuân thủ LibXposed API 100 guard rails và scope isolation.
  */
 internal lateinit var module: ModuleMain
 
@@ -18,31 +20,23 @@ class ModuleMain(base: XposedInterface, param: ModuleLoadedParam) : XposedModule
 
     init {
         module = this
-        // Rule 2: Initialize Xposed bridge
         Xposed.init(base)
-        log("EzXClean Module loaded at ${param.processName}")
+        log("Claw-G Vision Module loaded at ${param.processName}")
     }
 
     override fun onPackageLoaded(param: PackageLoadedParam) {
         super.onPackageLoaded(param)
-        
-        // Rule 1: Scope Isolation - Skip non-first packages
+
         if (!param.isFirstPackage) return
-        
-        // Rule 1: Scope Isolation - Skip module itself
-        if (param.packageName == "io.github.libxposed.ezxclean") return
-        
-        // Rule 1: Scope Isolation - Skip system server
+        if (param.packageName.startsWith("io.github.libxposed")) return
         if (param.packageName == "android") return
-        
+
         logI("Package loaded: ${param.packageName}")
-        
-        // Rule 4: Error handling
+
         runCatching {
-            // Integrate CleanHandler using IHook pattern
-            CleanHandler().hook(LoadPackageParam(param))
+            VisionBootstrapHandler().hook(LoadPackageParam(param))
         }.onFailure {
-            logE("Failed to load CleanHandler", it)
+            logE("Failed to bootstrap vision", it)
         }
     }
 }
